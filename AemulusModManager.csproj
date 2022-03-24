@@ -43,13 +43,6 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System.Linq" />
-    <Reference Include="System.Runtime" />
-    <Reference Include="System.Runtime.InteropServices" />
-    <Reference Include="System.Runtime.InteropServices.RuntimeInformation" />
-    <Reference Include="System.Threading.Thread" />
-  </ItemGroup>
-  <ItemGroup>
     <None Update="Aemulus_Setup.pdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
