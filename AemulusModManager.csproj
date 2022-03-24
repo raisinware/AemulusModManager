@@ -129,6 +129,7 @@
   <ItemGroup>
     <PackageReference Include="FontAwesome5" Version="2.0.8" />
     <PackageReference Include="gong-wpf-dragdrop" Version="2.3.1" />
+    <PackageReference Include="Microsoft-WindowsAPICodePack-Shell" Version="1.1.4" />
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
     <PackageReference Include="Microsoft.VisualBasic" Version="10.3.0" />
     <PackageReference Include="Microsoft.Win32.Registry" Version="4.7.0" />
@@ -140,7 +141,6 @@
     <PackageReference Include="System.Text.Json" Version="5.0.1" />
     <PackageReference Include="VideoLAN.LibVLC.Windows" Version="3.0.14" />
     <PackageReference Include="Vlc.DotNet.Wpf" Version="3.1.0" />
-    <PackageReference Include="WindowsAPICodePack-Shell" Version="1.1.1" />
     <PackageReference Include="WpfAnimatedGif" Version="2.0.0" />
     <PackageReference Include="Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers" Version="0.3.310801">
       <PrivateAssets>all</PrivateAssets>
