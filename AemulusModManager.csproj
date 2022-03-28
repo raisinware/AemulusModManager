@@ -49,6 +49,8 @@
     <Resource Include="Assets\Jost-Regular.ttf" />
     <Resource Include="Assets\RobotoMono-Regular.ttf" />
     <Resource Include="Assets\Jost-SemiBold.ttf" />
+	<None Include="Dependencies\AtlusScriptCompiler\Libraries\Persona5\Modules\Custom\Enums.json" />
+	<None Include="Dependencies\AtlusScriptCompiler\Libraries\Persona5\Modules\Custom\Functions.json" />
     <None Update="Dependencies\MakeCpk\filtered_data.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -102,19 +104,77 @@
     <Resource Include="Assets\p5sicon.png" />
     <Resource Include="Assets\GameBanana.png" />
     <Resource Include="Assets\loading.gif" />
+	<Content Include="Dependencies\AtlusScriptCompiler\Antlr4.Runtime.dll" />
     <Resource Include="Dependencies\AtlusScriptCompiler\Antlr4.Runtime.xml" />
-    <Content Include="Dependencies\AtlusScriptCompiler\AtlusFlowScriptExtractor.pdb" />
-    <Content Include="Dependencies\AtlusScriptCompiler\AtlusMessageScriptExtractor.pdb" />
-    <Content Include="Dependencies\AtlusScriptCompiler\AtlusScriptCompiler.pdb" />
-    <Content Include="Dependencies\AtlusScriptCompiler\AtlusScriptLibrary.pdb" />
-    <Resource Include="Dependencies\AtlusScriptCompiler\Newtonsoft.Json.xml" />
+	<Content Include="Dependencies\AtlusScriptCompiler\AtlusFlowScriptExtractor.exe" />
+	<Content Include="Dependencies\AtlusScriptCompiler\AtlusFlowScriptExtractor.pdb" />
+	<Content Include="Dependencies\AtlusScriptCompiler\AtlusMessageScriptExtractor.exe" />
+	<Content Include="Dependencies\AtlusScriptCompiler\AtlusMessageScriptExtractor.pdb" />
+	<Content Include="Dependencies\AtlusScriptCompiler\AtlusScriptCompiler.exe" />
+	<Content Include="Dependencies\AtlusScriptCompiler\AtlusScriptCompiler.pdb" />
+	<Content Include="Dependencies\AtlusScriptCompiler\AtlusScriptLibrary.dll" />
+	<Content Include="Dependencies\AtlusScriptCompiler\AtlusScriptLibrary.pdb" />
+	<Content Include="Dependencies\AtlusScriptCompiler\Newtonsoft.Json.dll" />
+	<Resource Include="Dependencies\AtlusScriptCompiler\Newtonsoft.Json.xml" />
+	<Content Include="Dependencies\CpkMakeC\CpkBinder.dll">
+		<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	</Content>
+	<Content Include="Dependencies\CpkMakeC\cpkmakec.exe">
+		<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	</Content>
+	<Content Include="Dependencies\CpkMakeC\CpkMaker.dll">
+		<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	</Content>
+	<Content Include="Dependencies\PM1MessageScriptEditor\Antlr4.Runtime.dll" />
+	<Content Include="Dependencies\PM1MessageScriptEditor\AtlusScriptLibrary.dll" />
+	<Content Include="Dependencies\PM1MessageScriptEditor\Newtonsoft.Json.dll" />
+	<Content Include="Dependencies\PM1MessageScriptEditor\PM1MessageScriptEditor.exe" />
+	<Content Include="Dependencies\rdb_tool.exe">
+		<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	</Content>
     <Resource Include="Assets\Aemulus.ico" />
+	<Content Include="Dependencies\7z\7z.dll">
+		<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	</Content>
+	<Content Include="Dependencies\7z\7z.exe">
+		<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	</Content>
     <Resource Include="Dependencies\7z\License.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+	<Content Include="Dependencies\MakeCpk\CpkMaker.dll">
+		<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	</Content>
+	<Content Include="Dependencies\MakeCpk\YACpkTool.exe">
+		<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	</Content>
+	<Content Include="Dependencies\Preappfile\Amicitia.IO.dll">
+		<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	</Content>
+	<Content Include="Dependencies\Preappfile\CommandLine.dll">
+		<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	</Content>
+	<Content Include="Dependencies\Preappfile\Glob.dll">
+		<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	</Content>
+	<Content Include="Dependencies\Preappfile\preappfile.dll">
+		<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	</Content>
+	<Content Include="Dependencies\Preappfile\preappfile.exe">
+		<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	</Content>
+	<Content Include="Dependencies\Preappfile\PreappPartnersLib.dll">
+		<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	</Content>
     <Resource Include="Assets\HHH.png" />
     <Resource Include="Assets\Inaba.png" />
+	<Content Include="Dependencies\PAKPack\AtlusFileSystemLibrary.dll">
+		<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	</Content>
     <Resource Include="Assets\Preview.png" />
+	<Content Include="Dependencies\PAKPack\PAKPack.exe">
+		<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	</Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Original\" />
