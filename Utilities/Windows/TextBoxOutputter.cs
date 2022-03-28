@@ -51,7 +51,6 @@ namespace AemulusModManager
         public override void WriteLine(string value)
         {
             WriteLineEvent?.Invoke(this, new ConsoleWriterEventArgs(value));
-            base.WriteLine(value);
             if (sw != null)
             {
                 sw.WriteLine($"{DateTime.Now} {value}");
