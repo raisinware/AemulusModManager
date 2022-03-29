@@ -37,6 +37,7 @@ namespace AemulusModManager
         }
         private string ConvertUrl(string oldUrl)
         {
+            // TODO: Move to HttpClient
             HttpWebRequest webRequest = (HttpWebRequest)WebRequest.Create(oldUrl);
             webRequest.AllowAutoRedirect = false;  // IMPORTANT
 
