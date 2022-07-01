@@ -921,6 +921,8 @@ namespace AemulusModManager
                     {
                         Refresh();
                         updatePackages(lastLoadout);
+                        fileProvider = new PhysicalFileProvider(Path.GetDirectoryName(Assembly.GetEntryAssembly().Location));
+                        WatchForRefresh();
                     }
                 }
             }
