@@ -1001,7 +1001,6 @@ namespace AemulusModManager
                     Console.WriteLine($"[INFO] Launching {elfPath} with {launcherPath}");
                 ProcessStartInfo startInfo = new ProcessStartInfo();
                 startInfo.CreateNoWindow = true;
-                startInfo.UseShellExecute = false;
                 startInfo.FileName = launcherPath;
                 if (!FileIOWrapper.Exists(launcherPath))
                 {
@@ -1121,9 +1120,15 @@ namespace AemulusModManager
                 EnableUI();
             }
             else if (game == "Persona 5 Strikers")
-                Process.Start("steam://rungameid/1382330/option0");
+            {
+                ProcessStartInfo sInfo = new ProcessStartInfo("steam://rungameid/1382330/option0");
+                sInfo.UseShellExecute = true;
+                Process.Start(sInfo);
+            }
             else
+            {
                 Console.WriteLine("[ERROR] Please setup shortcut in config menu.");
+            }
         }
         private void ConfigWdwClick(object sender, RoutedEventArgs e)
         {
@@ -1423,6 +1428,7 @@ namespace AemulusModManager
                             try
                             {
                                 ProcessStartInfo StartInformation = new ProcessStartInfo();
+                                StartInformation.UseShellExecute = true;
                                 StartInformation.FileName = package;
                                 Process process = Process.Start(StartInformation);
                                 Console.WriteLine($@"[INFO] Opened Packages\{game}\{Path.GetFileName(package)}.");
@@ -1680,6 +1686,7 @@ namespace AemulusModManager
                         updateConfig();
                         updatePackages();
                         ProcessStartInfo StartInformation = new ProcessStartInfo();
+                        StartInformation.UseShellExecute = true;
                         StartInformation.FileName = path;
                         Process process = Process.Start(StartInformation);
                         Console.WriteLine("[INFO] Opened new package folder.");
@@ -2489,6 +2496,7 @@ namespace AemulusModManager
                         try
                         {
                             ProcessStartInfo StartInformation = new ProcessStartInfo();
+                            StartInformation.UseShellExecute = true;
                             StartInformation.FileName = $@"{Path.GetDirectoryName(Assembly.GetEntryAssembly().Location)}\Packages\{game}\{row.path}";
                             Process process = Process.Start(StartInformation);
                             Console.WriteLine($@"[INFO] Opened Packages\{game}\{row.path}.");
@@ -3051,6 +3059,7 @@ namespace AemulusModManager
                 try
                 {
                     ProcessStartInfo StartInformation = new ProcessStartInfo();
+                    StartInformation.UseShellExecute = true;
                     StartInformation.FileName = $@"{Path.GetDirectoryName(Assembly.GetEntryAssembly().Location)}\Packages\{game}";
                     Process process = Process.Start(StartInformation);
                     Console.WriteLine($@"[INFO] Opened Packages\{game}.");
