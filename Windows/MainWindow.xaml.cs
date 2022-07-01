@@ -31,6 +31,8 @@ using AemulusModManager.Windows;
 using AemulusModManager.Utilities.Windows;
 using System.ComponentModel;
 using AemulusModManager.Utilities.FileMerging;
+using Microsoft.Extensions.FileProviders;
+using Microsoft.Extensions.Primitives;
 
 namespace AemulusModManager
 {
@@ -82,6 +84,8 @@ namespace AemulusModManager
         private string lastLoadout;
         private string lastGame;
         public Prop<bool> showHidden { get; set; }
+        private static PhysicalFileProvider fileProvider;
+        private static IChangeToken fileChangeToken;
 
         public DisplayedMetadata InitDisplayedMetadata(Metadata m)
         {
@@ -759,15 +763,18 @@ namespace AemulusModManager
                     RightGrid.RowDefinitions[2].Height = new GridLength((double)config.RightBottomGridHeight, GridUnitType.Star);
 
                 LaunchPopup.Text = $"Launch {game}\n(Ctrl+L)";
-                FileSystemWatcher fileSystemWatcher = new FileSystemWatcher($@"{Path.GetDirectoryName(Assembly.GetEntryAssembly().Location)}");
-                fileSystemWatcher.Filter = "refresh.aem";
-                fileSystemWatcher.EnableRaisingEvents = true;
-                fileSystemWatcher.Created += FileSystemWatcher_Created;
+                fileProvider = new PhysicalFileProvider(@"Path.GetDirectoryName(Assembly.GetEntryAssembly().Location)");
+                WatchForRefresh();
                 if (!oneClick)
                     UpdateAllAsync();
 
             }
 
+        }
+        private void WatchForRefresh()
+        {
+            fileChangeToken = fileProvider.Watch("refresh.aem");
+            fileChangeToken.RegisterChangeCallback(HandleRefresh, default);
         }
         private async void InitMediaPlayer()
         {
@@ -887,7 +894,7 @@ namespace AemulusModManager
             });
             return isReady;
         }
-        private async void FileSystemWatcher_Created(object sender, FileSystemEventArgs e)
+        private async void HandleRefresh(object state)
         {
             var game = "";
             if (FileIOWrapper.Exists($@"{Path.GetDirectoryName(Assembly.GetEntryAssembly().Location)}\refresh.aem"))
