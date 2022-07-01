@@ -763,7 +763,7 @@ namespace AemulusModManager
                     RightGrid.RowDefinitions[2].Height = new GridLength((double)config.RightBottomGridHeight, GridUnitType.Star);
 
                 LaunchPopup.Text = $"Launch {game}\n(Ctrl+L)";
-                fileProvider = new PhysicalFileProvider(@"Path.GetDirectoryName(Assembly.GetEntryAssembly().Location)");
+                fileProvider = new PhysicalFileProvider(Path.GetDirectoryName(Assembly.GetEntryAssembly().Location));
                 WatchForRefresh();
                 if (!oneClick)
                     UpdateAllAsync();
