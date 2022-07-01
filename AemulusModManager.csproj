@@ -119,6 +119,9 @@
     <None Include="aemulus_overlay.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="aemulus_overlay_grey.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <Resource Include="Assets\general.png" />
     <Resource Include="Assets\p3f.png" />
     <Resource Include="Assets\p5.png" />
@@ -173,7 +176,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Resource Include="Dependencies\7z\License.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Content Include="Dependencies\MakeCpk\CpkMaker.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
