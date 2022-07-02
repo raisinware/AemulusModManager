@@ -148,7 +148,8 @@ namespace AemulusModManager
             {
                 try
                 {
-                    Process.Start(destination.ToString());
+                    var ps = new ProcessStartInfo(destination.ToString()) { UseShellExecute = true };
+                    Process.Start(ps);
                 }
                 catch (Exception ex)
                 {
@@ -1130,8 +1131,7 @@ namespace AemulusModManager
             }
             else if (game == "Persona 5 Strikers")
             {
-                ProcessStartInfo sInfo = new ProcessStartInfo("steam://rungameid/1382330/option0");
-                sInfo.UseShellExecute = true;
+                ProcessStartInfo sInfo = new ProcessStartInfo("steam://rungameid/1382330/option0") { UseShellExecute = true };
                 Process.Start(sInfo);
             }
             else
@@ -2470,7 +2470,8 @@ namespace AemulusModManager
                         NavigateUri = new Uri(segment),
                     };
 
-                    hyperlink.RequestNavigate += (sender, args) => Process.Start(segment);
+                    var ps = new ProcessStartInfo(segment) { UseShellExecute = true };
+                    hyperlink.RequestNavigate += (sender, args) => Process.Start(ps);
 
                     paragraph.Inlines.Add(hyperlink);
                 }
@@ -2485,12 +2486,14 @@ namespace AemulusModManager
 
         private void Inaba_Click(object sender, RoutedEventArgs e)
         {
-            Process.Start("https://gamebanana.com/tools/6872");
+            var ps = new ProcessStartInfo("https://gamebanana.com/tools/6872") { UseShellExecute = true };
+            Process.Start(ps);
         }
 
         private void HHH_Click(object sender, RoutedEventArgs e)
         {
-            Process.Start("https://gamebanana.com/gamefiles/12806");
+            var ps = new ProcessStartInfo("https://gamebanana.com/gamefiles/12806") { UseShellExecute = true };
+            Process.Start(ps);
         }
 
         private void OpenItem_Click(object sender, RoutedEventArgs e)
@@ -3005,12 +3008,14 @@ namespace AemulusModManager
 
         private void Kofi_Click(object sender, MouseButtonEventArgs e)
         {
-            Process.Start("https://www.ko-fi.com/tekka");
+            var ps = new ProcessStartInfo("https://www.ko-fi.com/tekka") { UseShellExecute = true };
+            Process.Start(ps);
         }
 
         private void Setup_Click(object sender, MouseButtonEventArgs e)
         {
-            Process.Start("https://aemulus.cep.one/install");
+            var ps = new ProcessStartInfo("https://aemulus.cep.one/install") { UseShellExecute = true };
+            Process.Start(ps);
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
