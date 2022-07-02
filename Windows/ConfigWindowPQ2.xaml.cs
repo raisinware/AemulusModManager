@@ -202,7 +202,7 @@ namespace AemulusModManager
 
         private async void UnpackPacsClick(object sender, RoutedEventArgs e)
         {
-            string selectedPath = selectExe("Select PQ2 data.cpk to unpack", ".cpk");
+            string selectedPath = selectExe("Select PQ2 data.cpk to unpack", "cpk");
             if (selectedPath == null)
             {
                 Console.WriteLine("[ERROR] Incorrect file chosen for unpacking.");
